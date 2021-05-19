@@ -1,0 +1,108 @@
+body
+  max-width: 100%
+  overflow-x: hidden
+  display: flex
+  flex-direction: column
+  @include font()
+  margin: 0
+
+  .wrapper
+    max-width: 1330px
+    padding: 0 15px
+    +box
+    margin: 0 auto
+
+    &_fullHD
+      max-width: 1920px
+      margin: 0 auto
+      overflow-x: hidden
+      position: relative
+
+p
+  margin: 0
+
+.innerTitle
+  @include font($textBlack, $regular, 400, 72px, 1)
+  margin: 0 0 70px
+
+  &.star
+    position: relative
+
+    &::before
+      position: absolute
+      content: url("../images/star.svg")
+      width: 60px
+      height: 60px
+      right: 80px
+      bottom: -20%
+
+  &.border
+    +box
+
+    &::after
+      content: ' '
+      width: 25px
+      height: 2px
+      background: $lightBeige
+      display: block
+      margin-top: 45px
+
+.subtitle
+  @include font($subtitle, $regular, 400, 220px, 1)
+  position: absolute
+  z-index: -1
+  top: -15px
+
+.btn
+  display: inline-flex
+  padding: 0 55px
+  @include font($white, $regular, 400, 18px, 55px)
+  white-space: nowrap
+  text-decoration: none
+  +transition
+  +border-radius(30px)
+  +box
+
+  &:hover
+    +transition
+
+  &_bordered
+    border: 1px solid $white
+
+    &:hover
+      +box-shadow(0 0 10px rgba(0, 0, 0, 55%))
+
+  &_beige
+    color: $darkBeige
+    background: $lightBeige
+
+    &:hover
+      background: $beige
+
+  &_img
+    border-bottom: 4px solid #cda370
+    position: relative
+    line-height: 80px
+    +border-radius(40px)
+    padding: 0 55px 0 140px
+
+    &:hover
+      +box-shadow(0 0 10px rgba(0, 0, 0, 55%))
+      border-color: $darkBeige
+
+    img
+      position: absolute
+      bottom: 0
+      left: 30px
+
+.label
+  @include font($white, $pt, 400, 18px, 2)
+  white-space: nowrap
+  background: rgba(255, 255, 255, 0.1)
+  backdrop-filter: blur(10px)
+  position: absolute
+  top: 40px
+  left: 40px
+  padding: 0 20px
+  +border-radius(18px)
+  +transition
