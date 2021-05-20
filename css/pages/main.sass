@@ -118,10 +118,13 @@
       position: relative
       margin-right: 50px
 
+      &__num
+        @include font($white, $size: 190px, $line: 1)
+        margin-bottom: -135px
+        margin-top: 20px
+
       svg
         position: static
-        margin-bottom: -105px
-        margin-top: 45px
 
       &::after
         position: absolute
@@ -140,9 +143,6 @@
 
 .s_spec
   margin-bottom: 120px
-
-  .wrapper_fullHD
-    overflow: unset
 
   .subtitle
     right: 0
@@ -275,8 +275,7 @@
               +transition
 
 .s_stock
-  .wrapper_fullHD
-    overflow: unset
+  margin-bottom: 80px
 
   .subtitle
     left: 80px
@@ -289,3 +288,263 @@
     &::before
       bottom: 90%
       right: -150px
+
+  &__list
+    &__item
+      background: $beige
+      padding: 40px
+      +box
+      +border-radius(25px)
+
+      &:nth-child(even)
+        background: $darkBeige
+
+      img
+        width: 95px
+        height: 95px
+
+      &__title
+        @include font($white, $regular, 400, 44px, 1.3)
+        margin-bottom: 20px
+
+      p
+        @include font($white, $pt, 400, 22px, 1.5)
+        margin-bottom: 30px
+
+      &__container
+        +space-nw
+        align-items: center
+
+      &__price
+        > div
+          @include font($white, $regular, 400, 30px, 1.5)
+          position: relative
+
+          &::after
+            position: absolute
+            display: block
+            content: url("../images/fat-arrow.svg")
+            width: 30px
+            top: 10px
+            left: -40px
+
+        &_old
+          @include font($white, $regular, 400, 18px, 1)
+          text-decoration: line-through
+          opacity: 0.4
+
+.s_free
+  margin-bottom: 170px
+
+  .wrapper_fullHD
+    background: url("../images/free.jpg") right top
+    +border-radius(25px)
+
+.free
+  padding: 100px 0 90px
+  position: relative
+  display: flex
+  align-items: flex-start
+
+  .innerTitle.border::after
+    background: $white
+
+  img
+    margin-top: -120px
+
+  &__container
+    width: 700px
+
+  p
+    @include font($textBlack, $pt, 400, 22px, 1.5)
+    margin-bottom: 50px
+
+.s_staff
+  margin-bottom: 80px
+
+  .subtitle
+    left: 80px
+    top: -115px
+
+.staff
+  &__title
+    display: flex
+    align-items: flex-end
+    margin-bottom: 100px
+
+    .innerTitle
+      max-width: 600px
+      margin-bottom: 0
+      margin-right: 150px
+
+      &.star
+        &::before
+          top: -70px
+          right: 0
+
+  &__list
+    &__item
+      img
+        height: 500px
+        width: 100%
+        +cover
+
+      &__container
+        position: relative
+        +center
+        +border-radius(15px)
+        overflow: hidden
+
+        &.award::before
+          position: absolute
+          right: 15px
+          top: 25px
+          content: url("../images/award.svg")
+
+      &__content
+        position: absolute
+        padding: 30px
+        +box
+        left: 0
+        right: 0
+        bottom: 0
+
+      .btn_beige
+        width: 100%
+        padding-top: 25px
+        margin-top: -25px
+        +border-radius(15px)
+        justify-content: center
+
+      &__surname
+        @include font($lightBeige, $regular, 400, 55px, 1)
+        margin-bottom: 10px
+
+      &__name
+        @include font($white, $regular, 400, 26px, 1)
+        margin-bottom: 20px
+
+      &__prof
+        @include font($white, $regular, 400, 14px, 1)
+
+.s_advantages
+  margin-bottom: 80px
+
+.advantages
+  .innerTitle.star
+    &::before
+      top: -20px
+
+
+  &__list
+    +space
+
+    &__item
+      width: calc(50%)
+      position: relative
+      overflow: hidden
+      border: 1px solid $subtitle
+      +box
+
+      &:first-child
+        border-right: none
+        +border-radius(25px 0 0 25px)
+
+      &:last-child
+        +border-radius(0 25px 25px 0)
+        padding: 60px
+
+      &__rgs
+        background: $subtitle
+        padding: 20px 50px
+        +box
+
+        img
+          max-width: 100%
+
+      &__container
+        padding: 0 50px 50px
+        +box
+
+      &__doc
+        +center
+        margin-top: -30px
+        margin-bottom: 25px
+
+      p
+        @include font($textBlack, $regular, 400, 22px, 1.5)
+
+        &.border
+          position: relative
+
+          &::before
+            content: ' '
+            width: 25px
+            height: 3px
+            background: $darkBeige
+            position: absolute
+            left: 0
+            top: -40px
+
+      &__logo
+        margin-bottom: 60px
+
+      &__title
+        @include font($textBlack, $regular, 400, 42px, 1.2)
+        margin-bottom: 30px
+
+        &::before
+          content: ' '
+          display: block
+          width: 25px
+          height: 3px
+          background: $beige
+          margin-bottom: 40px
+
+      &__blur
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: url("../images/advantage.jpg")
+        background-size: cover
+        +box
+        z-index: -1
+        opacity: 0.6
+        filter: blur(20px)
+        border-radius: 25px
+        transform: matrix(-1, 0, 0, 1, 0, 0)
+
+.s_news
+
+.news
+  &__list
+    +space
+
+    &__item
+      width: 32%
+      color: $beige
+
+      img
+        width: 100%
+        height: 280px
+        +cover
+        +border-radius(25px)
+        margin-bottom: 25px
+
+      &__title
+        @include font($textBlack, $regular, 400, 26px, 1.3)
+        margin-bottom: 20px
+
+      p
+        @include font($textBlack, $pt, 400, 16px, 1.3)
+        margin-bottom: 15px
+
+      a
+        @include font($beige, $regular, 400, 15px, 1)
+        text-decoration: none
+        margin-left: 10px
+
+        &:hover
+          text-decoration: underline

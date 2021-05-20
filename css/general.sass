@@ -15,7 +15,6 @@ body
     &_fullHD
       max-width: 1920px
       margin: 0 auto
-      overflow-x: hidden
       position: relative
 
 p
@@ -27,6 +26,17 @@ p
 
   &.star
     position: relative
+
+    &_white
+      position: relative
+
+      &::before
+        position: absolute
+        content: url("../images/star-white.svg")
+        width: 60px
+        height: 60px
+        left: -110px
+        top: 0
 
     &::before
       position: absolute

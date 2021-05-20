@@ -29,7 +29,6 @@ body {
     body .wrapper_fullHD {
       max-width: 1920px;
       margin: 0 auto;
-      overflow-x: hidden;
       position: relative; }
 
 p {
@@ -44,6 +43,15 @@ p {
   margin: 0 0 70px; }
   .innerTitle.star {
     position: relative; }
+    .innerTitle.star_white {
+      position: relative; }
+      .innerTitle.star_white::before {
+        position: absolute;
+        content: url("../images/star-white.svg");
+        width: 60px;
+        height: 60px;
+        left: -110px;
+        top: 0; }
     .innerTitle.star::before {
       position: absolute;
       content: url("../images/star.svg");
@@ -155,7 +163,6 @@ p {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   position: relative;
   z-index: 10; }
   .header .logo {
@@ -530,10 +537,16 @@ p {
       line-height: 1.5;
       position: relative;
       margin-right: 50px; }
+      .about__content__year__num {
+        font-size: 190px;
+        font-family: Nat Flight, sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+        line-height: 1;
+        margin-bottom: -135px;
+        margin-top: 20px; }
       .about__content__year svg {
-        position: static;
-        margin-bottom: -105px;
-        margin-top: 45px; }
+        position: static; }
       .about__content__year::after {
         position: absolute;
         content: url("../images/star.svg");
@@ -550,8 +563,6 @@ p {
 
 .s_spec {
   margin-bottom: 120px; }
-  .s_spec .wrapper_fullHD {
-    overflow: unset; }
   .s_spec .subtitle {
     right: 0;
     top: -45px; }
@@ -713,17 +724,308 @@ p {
             -webkit-transition: all 0.4s ease 0s;
             transition: all 0.4s ease 0s; }
 
-.s_stock .wrapper_fullHD {
-  overflow: unset; }
-.s_stock .subtitle {
-  left: 80px;
-  top: -115px; }
+.s_stock {
+  margin-bottom: 80px; }
+  .s_stock .subtitle {
+    left: 80px;
+    top: -115px; }
 
 .stock .innerTitle.star {
   max-width: 650px; }
   .stock .innerTitle.star::before {
     bottom: 90%;
     right: -150px; }
+.stock__list__item {
+  background: #B28C5E;
+  padding: 40px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px; }
+  .stock__list__item:nth-child(even) {
+    background: #70604C; }
+  .stock__list__item img {
+    width: 95px;
+    height: 95px; }
+  .stock__list__item__title {
+    font-size: 44px;
+    font-family: Nat Flight, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 20px; }
+  .stock__list__item p {
+    font-size: 22px;
+    font-family: PT, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 30px; }
+  .stock__list__item__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .stock__list__item__price > div {
+    font-size: 30px;
+    font-family: Nat Flight, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.5;
+    position: relative; }
+    .stock__list__item__price > div::after {
+      position: absolute;
+      display: block;
+      content: url("../images/fat-arrow.svg");
+      width: 30px;
+      top: 10px;
+      left: -40px; }
+  .stock__list__item__price_old {
+    font-size: 18px;
+    font-family: Nat Flight, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1;
+    text-decoration: line-through;
+    opacity: 0.4; }
+
+.s_free {
+  margin-bottom: 170px; }
+  .s_free .wrapper_fullHD {
+    background: url("../images/free.jpg") right top;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px; }
+
+.free {
+  padding: 100px 0 90px;
+  position: relative;
+  display: flex;
+  align-items: flex-start; }
+  .free .innerTitle.border::after {
+    background: #ffffff; }
+  .free img {
+    margin-top: -120px; }
+  .free__container {
+    width: 700px; }
+  .free p {
+    font-size: 22px;
+    font-family: PT, sans-serif;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.5;
+    margin-bottom: 50px; }
+
+.s_staff {
+  margin-bottom: 80px; }
+  .s_staff .subtitle {
+    left: 80px;
+    top: -115px; }
+
+.staff__title {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 100px; }
+  .staff__title .innerTitle {
+    max-width: 600px;
+    margin-bottom: 0;
+    margin-right: 150px; }
+    .staff__title .innerTitle.star::before {
+      top: -70px;
+      right: 0; }
+.staff__list__item img {
+  height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+.staff__list__item__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  overflow: hidden; }
+  .staff__list__item__container.award::before {
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    content: url("../images/award.svg"); }
+.staff__list__item__content {
+  position: absolute;
+  padding: 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+.staff__list__item .btn_beige {
+  width: 100%;
+  padding-top: 25px;
+  margin-top: -25px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  justify-content: center; }
+.staff__list__item__surname {
+  font-size: 55px;
+  font-family: Nat Flight, sans-serif;
+  font-weight: 400;
+  color: #FECA8B;
+  line-height: 1;
+  margin-bottom: 10px; }
+.staff__list__item__name {
+  font-size: 26px;
+  font-family: Nat Flight, sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 20px; }
+.staff__list__item__prof {
+  font-size: 14px;
+  font-family: Nat Flight, sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1; }
+
+.s_advantages {
+  margin-bottom: 80px; }
+
+.advantages .innerTitle.star::before {
+  top: -20px; }
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .advantages__list__item {
+    width: calc(50%);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #F6F2EC;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    .advantages__list__item:first-child {
+      border-right: none;
+      -webkit-border-radius: 25px 0 0 25px;
+      -moz-border-radius: 25px 0 0 25px;
+      border-radius: 25px 0 0 25px; }
+    .advantages__list__item:last-child {
+      -webkit-border-radius: 0 25px 25px 0;
+      -moz-border-radius: 0 25px 25px 0;
+      border-radius: 0 25px 25px 0;
+      padding: 60px; }
+    .advantages__list__item__rgs {
+      background: #F6F2EC;
+      padding: 20px 50px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+      .advantages__list__item__rgs img {
+        max-width: 100%; }
+    .advantages__list__item__container {
+      padding: 0 50px 50px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+    .advantages__list__item__doc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -30px;
+      margin-bottom: 25px; }
+    .advantages__list__item p {
+      font-size: 22px;
+      font-family: Nat Flight, sans-serif;
+      font-weight: 400;
+      color: #000000;
+      line-height: 1.5; }
+      .advantages__list__item p.border {
+        position: relative; }
+        .advantages__list__item p.border::before {
+          content: " ";
+          width: 25px;
+          height: 3px;
+          background: #70604C;
+          position: absolute;
+          left: 0;
+          top: -40px; }
+    .advantages__list__item__logo {
+      margin-bottom: 60px; }
+    .advantages__list__item__title {
+      font-size: 42px;
+      font-family: Nat Flight, sans-serif;
+      font-weight: 400;
+      color: #000000;
+      line-height: 1.2;
+      margin-bottom: 30px; }
+      .advantages__list__item__title::before {
+        content: " ";
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #B28C5E;
+        margin-bottom: 40px; }
+    .advantages__list__item__blur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("../images/advantage.jpg");
+      background-size: cover;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      z-index: -1;
+      opacity: 0.6;
+      filter: blur(20px);
+      border-radius: 25px;
+      transform: matrix(-1, 0, 0, 1, 0, 0); }
+
+.news__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .news__list__item {
+    width: 32%;
+    color: #B28C5E; }
+    .news__list__item img {
+      width: 100%;
+      height: 280px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      margin-bottom: 25px; }
+    .news__list__item__title {
+      font-size: 26px;
+      font-family: Nat Flight, sans-serif;
+      font-weight: 400;
+      color: #000000;
+      line-height: 1.3;
+      margin-bottom: 20px; }
+    .news__list__item p {
+      font-size: 16px;
+      font-family: PT, sans-serif;
+      font-weight: 400;
+      color: #000000;
+      line-height: 1.3;
+      margin-bottom: 15px; }
+    .news__list__item a {
+      font-size: 15px;
+      font-family: Nat Flight, sans-serif;
+      font-weight: 400;
+      color: #B28C5E;
+      line-height: 1;
+      text-decoration: none;
+      margin-left: 10px; }
+      .news__list__item a:hover {
+        text-decoration: underline; }
 
 /* RESPONSIVE */
 @font-face {
