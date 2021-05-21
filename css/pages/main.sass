@@ -1,9 +1,26 @@
 .s_hero
-  .wrapper_fullHD
-    margin: -180px auto 80px
+  margin-top: -180px
+  margin-bottom: 80px
+  position: relative
+
+  .hero__slider .slick-slide
     z-index: 1
     padding: 250px 0 200px
     background-size: cover !important
+    position: relative
+
+  .slick-dots
+    position: absolute
+    left: 305px
+    bottom: 100px
+
+    li
+      button
+        background: #C4C4C4
+
+      &.slick-active
+        button
+          background: $lightBeige
 
 .hero
   h1
@@ -290,7 +307,10 @@
       right: -150px
 
   &__list
+    margin: 0 -10px
+
     &__item
+      margin: 0 10px
       background: $beige
       padding: 40px
       +box
@@ -338,6 +358,7 @@
 
   .wrapper_fullHD
     background: url("../images/free.jpg") right top
+    background-size: cover
     +border-radius(25px)
 
 .free
@@ -383,7 +404,11 @@
           right: 0
 
   &__list
+    margin: 0 -10px
+
     &__item
+      margin: 0 10px
+
       img
         height: 500px
         width: 100%
@@ -517,6 +542,7 @@
         transform: matrix(-1, 0, 0, 1, 0, 0)
 
 .s_news
+  margin-bottom: 60px
 
 .news
   &__list
@@ -541,10 +567,45 @@
         @include font($textBlack, $pt, 400, 16px, 1.3)
         margin-bottom: 15px
 
-      a
+      &__link
         @include font($beige, $regular, 400, 15px, 1)
         text-decoration: none
         margin-left: 10px
 
         &:hover
           text-decoration: underline
+
+      &.socials
+        background: $subtitle
+        padding: 40px
+        +box
+        +border-radius(25px)
+
+        .news__list__item
+          &__title
+            @include font($textBlack, $regular, 400, 26px, 1.3)
+
+        ul
+          list-style: none
+          padding: 0
+          margin: 0
+
+        li
+          &:not(:last-child)
+            margin-bottom: 15px
+
+        .btn_bordered
+          border-width: 2px
+          width: 100%
+          line-height: 55px
+          @include font($beige, $bold, 700, 18px, 55px)
+          padding: 0 20px 0 70px
+
+          &.insta
+            background: url("../images/insta.svg") no-repeat 5px
+
+          &.vk
+            background: url("../images/vk.svg") no-repeat 5px
+
+          &.face
+            background: url("../images/face.svg") no-repeat 5px

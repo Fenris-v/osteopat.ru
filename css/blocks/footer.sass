@@ -1,0 +1,57 @@
+footer
+  background: #5E503F
+  padding: 70px 0 100px
+
+.footer
+  +space-nw
+
+  .logo
+    margin-bottom: 30px
+
+  &__copyright
+    @include font($white, $pt, 16px, 1.5)
+    opacity: 0.5
+
+  &__title
+    @include font($white, $regular, 400, 22px, 1)
+    margin-bottom: 30px
+
+  nav
+    &::before
+      content: ' '
+      display: block
+      width: 25px
+      height: 2px
+      background: $beige
+      margin-bottom: 30px
+
+    ul
+      -webkit-column-count: 2
+      -moz-column-count: 2
+      column-count: 2
+
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+    li
+      @include font($white, $pt, 400, 16px, 1)
+      margin-bottom: 15px
+
+      a
+        @include font($white, $pt, 400, 16px, 1)
+        text-decoration: none
+
+        &:hover
+          text-decoration: underline
+
+      &.beige
+        a
+          color: $beige
+
+  .header__phone
+    margin-bottom: 15px
+
+  .header__address
+    margin-bottom: 30px
