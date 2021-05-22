@@ -452,7 +452,7 @@ footer {
 
 .menu-toggle-line {
   position: absolute;
-  background: #000000;
+  background: #B28C5E;
   display: block;
   margin: auto;
   height: 4px;
@@ -502,7 +502,7 @@ footer {
   -moz-transition: opacity 0.2s ease 0s, transform 0.2s ease 0s, -moz-transform 0.2s ease 0s; }
 
 .adaptive-menu-toggle--open .menu-toggle-line {
-  background: #000000; }
+  background: #B28C5E; }
 
 .adaptive-menu-toggle--open .menu-toggle-line--1 {
   width: 0;
@@ -549,7 +549,7 @@ footer {
   -o-transition: opacity 0.2s ease 0.4s, -o-transform 0.2s ease 0.4s;
   -moz-transition: opacity 0.2s ease 0.4s, transform 0.2s ease 0.4s, -moz-transform 0.2s ease 0.4s; }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 1200px) {
   .header__hamburger {
     display: block !important;
     position: absolute;
@@ -557,18 +557,31 @@ footer {
     top: 20px; }
 
   .headerNav_adaptive {
-    background: #ffffff;
+    background: #F6F2EC;
     display: none;
     padding-top: 60px;
     position: absolute;
+    left: -15px;
+    right: -15px;
     top: 0;
     -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     -o-transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-    width: 100%;
     z-index: 3; }
+    .headerNav_adaptive ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+    .headerNav_adaptive .address p {
+      font-size: 22px;
+      font-family: Nat Flight, sans-serif;
+      font-weight: 400;
+      color: #B28C5E;
+      line-height: 1.5;
+      background: #ffffff;
+      padding: 10px; }
 
   .header_opened {
     display: block !important;
@@ -578,19 +591,21 @@ footer {
     -webkit-transform: translateX(0);
     transform: translateX(0); }
 
-  .headerNav__items_adaptive a {
+  .headerNav_adaptive a {
     background: #ffffff;
-    border: #000000 1px solid;
+    border: #B28C5E 1px solid;
     border-bottom: none;
-    color: #000000;
     display: block;
-    font-family: "Museo Sans Cyrl -300", sans-serif;
-    font-size: 17px;
+    font-size: 22px;
+    font-family: Nat Flight, sans-serif;
+    font-weight: 400;
+    color: #B28C5E;
+    line-height: 1.5;
     padding: 10px;
     text-decoration: none; }
 
-  .headerNav__items_adaptive li:last-child a {
-    border-bottom: #000000 1px solid; } }
+  .headerNav_adaptive li:last-child a {
+    border-bottom: #B28C5E 1px solid; } }
 /* PAGES */
 .s_hero {
   margin-top: -180px;
@@ -1290,17 +1305,143 @@ footer {
           background: url("../images/face.svg") no-repeat 5px; }
 
 /* RESPONSIVE */
-@font-face {
-  font-family: Nat Flight;
-  src: url(../fonts/Nat_Flight.otf); }
-@font-face {
-  font-family: Nat Bold;
-  src: url(../fonts/Nat_Flight_Bold.otf); }
-@font-face {
-  font-family: PT;
-  src: url(../fonts/PTSans-Regular.ttf); }
-@font-face {
-  font-family: BCH;
-  src: url(../fonts/BCH56.ttf); }
+@media only screen and (max-width: 1200px) {
+  .header {
+    padding: 10px 0; }
+    .header__address {
+      display: none; }
+    .header_right {
+      justify-content: center; }
+      .header_right_top {
+        margin-bottom: 0; }
+        .header_right_top .btn {
+          margin-right: 70px; }
+      .header_right_bottom {
+        display: none; }
+
+  .s_hero .slick-dots {
+    left: 15px; }
+
+  .stock__list__item__container {
+    flex-direction: column;
+    align-items: flex-start; }
+    .stock__list__item__container .btn {
+      margin-bottom: 15px; }
+  .stock__list__item__price {
+    margin-left: 35px; }
+
+  .staff__title__images {
+    display: none; }
+
+  .footer {
+    flex-wrap: wrap; }
+    .footer__column {
+      width: 49%; }
+      .footer__column:first-child {
+        order: 3; }
+      .footer__column:nth-child(2n) {
+        order: 1;
+        margin-bottom: 20px; }
+      .footer__column:nth-child(3n) {
+        order: 2;
+        margin-bottom: 20px; }
+      .footer__column:last-child {
+        order: 4; } }
+@media only screen and (max-width: 1000px) {
+  .subtitle {
+    font-size: 150px; }
+
+  .star::before {
+    display: none; }
+
+  .header__phone {
+    margin-left: auto; }
+  .header_right_top {
+    align-items: flex-end;
+    padding-right: 70px; }
+    .header_right_top .btn {
+      display: none; }
+
+  .about__content {
+    flex-wrap: wrap; }
+    .about__content_half {
+      width: 100%; }
+    .about__content__logo {
+      margin-bottom: 30px; }
+    .about__content__quote__icon {
+      display: none; }
+    .about__content__year {
+      display: none; }
+
+  .spec__list__item {
+    width: 49%; }
+
+  .s_free .wrapper_fullHD {
+    background: #F6F2EC; }
+
+  .free img {
+    display: none; }
+
+  .advantages__list {
+    flex-direction: column; }
+    .advantages__list__item {
+      width: 100%; }
+      .advantages__list__item:first-child {
+        -webkit-border-radius: 25px 25px 0 0;
+        -moz-border-radius: 25px 25px 0 0;
+        border-radius: 25px 25px 0 0; }
+      .advantages__list__item:last-child {
+        -webkit-border-radius: 0 0 25px 25px;
+        -moz-border-radius: 0 0 25px 25px;
+        border-radius: 0 0 25px 25px; }
+
+  .news__list__item {
+    width: 48%;
+    margin-bottom: 20px; }
+    .news__list__item.socials {
+      width: 100%;
+      margin-bottom: 0; } }
+@media only screen and (max-width: 767px) {
+  .innerTitle {
+    font-size: 36px; }
+
+  .header {
+    flex-direction: column;
+    align-items: center; }
+    .header .logo {
+      margin-right: 0;
+      margin-bottom: 20px; }
+    .header_right_top {
+      padding-right: 0; }
+    .header__phone {
+      margin: 0 auto; }
+
+  .s_hero {
+    margin-top: -220px; }
+    .s_hero .slick-dots {
+      bottom: -35px;
+      left: 50%;
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%); }
+
+  .hero h1 {
+    font-size: 36px; }
+  .hero__link {
+    max-width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; } }
+@media only screen and (max-width: 640px) {
+  .spec__list__item {
+    width: 100%; }
+
+  .news__list__item {
+    width: 100%; }
+
+  .footer__column {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
