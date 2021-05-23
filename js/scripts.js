@@ -50,7 +50,7 @@ $(document).ready(() => {
         arrows: false,
         dots: true,
         slidesToShow: 1,
-        autoplay: false,
+        autoplay: true,
     });
 
     /**
