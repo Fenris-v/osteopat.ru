@@ -61,3 +61,38 @@
     +round
     margin-right: 25px
 
+  &_bottom
+    padding-bottom: 20px
+    background-color: rgba(53, 43, 36, 0.1)
+
+  &_gradient
+    background: linear-gradient(to right, #5B4B40, #352B24)
+
+  &__title
+    margin: 0.5rem 0 0
+    font-weight: 400
+
+.breadcrumbs
+  padding-top: 25px
+  font-family: PT, sans-serif
+  &__list
+    margin: 0
+    padding: 0
+    display: flex
+    list-style: none
+    & a
+      margin-right: 63px
+      position: relative
+      text-decoration: none
+      color: $textBrown
+      &:after
+        content: ""
+        position: absolute
+        height: 5px
+        width: 5px
+        background-color: #999999
+        top: 45%
+        right: -33px
+        transform: rotate(45deg)
+    & span
+      color: $textLightBlack
