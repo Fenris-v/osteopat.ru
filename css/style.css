@@ -1306,6 +1306,9 @@ footer {
 .staff__list__item {
   margin: 0 10px;
 }
+.staff__list__item.inner {
+  margin: 0;
+}
 .staff__list__item img {
   height: 500px;
   width: 100%;
@@ -1375,6 +1378,7 @@ footer {
 }
 .staff__list_page {
   padding: 0;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 20px;
@@ -1639,7 +1643,7 @@ footer {
 .spec__list__link:before {
   content: "";
   position: absolute;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
   width: 40%;
   right: 200%;
   bottom: -13px;
@@ -1654,10 +1658,10 @@ footer {
 }
 .spec__list__link:hover:before {
   content: "";
-  border-bottom: 1px solid #B28C5E;
+  border-bottom: 3px solid #B28C5E;
   width: 40%;
   right: 30%;
-  bottom: -15px;
+  bottom: -16px;
   z-index: 20;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
