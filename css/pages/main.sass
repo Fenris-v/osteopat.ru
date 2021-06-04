@@ -452,6 +452,29 @@
       &__prof
         @include font($white, $regular, 400, 14px, 1)
 
+      &_page
+        max-width: 420px
+
+
+
+    &_page
+      padding: 0
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+      grid-gap: 20px
+      list-style: none
+      & .btn_beige
+        width: 100%
+        padding-top: 25px
+        margin-top: -25px
+        +border-radius(15px)
+        justify-content: center
+
+  &__button-wrapper
+    margin: 70px 0 50px
+    text-align: -webkit-center
+    text-align: center
+
 .s_advantages
   margin-bottom: 80px
 

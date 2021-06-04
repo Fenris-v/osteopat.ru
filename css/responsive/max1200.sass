@@ -53,3 +53,10 @@
 
       &:last-child
         order: 4
+
+  .spec
+    &__list
+      & li
+        &:not(:last-child):after
+          content: unset
+

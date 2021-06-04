@@ -1,0 +1,50 @@
+.s_doctors
+  margin-bottom: 80px
+
+.spec
+  &__list
+    padding: 0
+    margin-bottom: 12px
+    display: flex
+    list-style: none
+    & li
+      position: relative
+      &:not(:last-child):after
+        content: ""
+        position: absolute
+        height: 5px
+        width: 5px
+        background-color: #999999
+        top: 45%
+        right: -50px
+        @include transform(rotate(45deg))
+    &__link
+      position: relative
+      text-decoration: none
+      color: #000000
+      &:before
+        content: ""
+        position: absolute
+        border-bottom: 1px solid #ffffff
+        width: 40%
+        right: 200%
+        bottom: -13px
+        z-index: 5
+        @include transition(all 0.3s)
+      &:hover
+        color: #B28C5E
+        &:before
+          content: ""
+          border-bottom: 1px solid #B28C5E
+          width: 40%
+          right: 30%
+          bottom: -15px
+          z-index: 20
+          @include transition(all 0.3s)
+
+.line
+  &_light-gray
+    z-index: 10
+    border-bottom: 1px solid #9999993d
+
+
