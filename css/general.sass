@@ -38,6 +38,28 @@ p
         left: -110px
         top: 0
 
+    &_gorizontal
+      position: relative
+      &::before
+        position: absolute
+        content: url("../images/star.svg")
+        width: 60px
+        height: 60px
+        top: 25px
+        right: -215px
+
+    &_high
+      position: relative
+      &::before
+        content: ""
+        position: absolute
+        width: 40px
+        height: 40px
+        top: -15px
+        right: -130px
+        background: url(../images/star.svg)
+        background-size: contain
+
     &::before
       position: absolute
       content: url("../images/star.svg")
@@ -45,6 +67,16 @@ p
       height: 60px
       right: 80px
       bottom: -20%
+
+    &_inside
+      position: relative
+      &::before
+        position: absolute
+        content: url("../images/star.svg")
+        width: 60px
+        height: 60px
+        top: -140px
+        left: 250px
 
   &.border
     +box
@@ -56,6 +88,8 @@ p
       background: $lightBeige
       display: block
       margin-top: 45px
+
+
 
 .subtitle
   @include font($subtitle, $regular, 400, 220px, 1)
@@ -104,6 +138,11 @@ p
       position: absolute
       bottom: 0
       left: 30px
+
+  &_services
+    position: absolute
+    bottom: 40px
+    left: 35px
 
 
 .label

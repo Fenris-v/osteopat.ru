@@ -161,6 +161,30 @@ p {
   left: -110px;
   top: 0;
 }
+.innerTitle.star_gorizontal {
+  position: relative;
+}
+.innerTitle.star_gorizontal::before {
+  position: absolute;
+  content: url("../images/star.svg");
+  width: 60px;
+  height: 60px;
+  top: 25px;
+  right: -215px;
+}
+.innerTitle.star_high {
+  position: relative;
+}
+.innerTitle.star_high::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -15px;
+  right: -130px;
+  background: url(../images/star.svg);
+  background-size: contain;
+}
 .innerTitle.star::before {
   position: absolute;
   content: url("../images/star.svg");
@@ -168,6 +192,17 @@ p {
   height: 60px;
   right: 80px;
   bottom: -20%;
+}
+.innerTitle.star_inside {
+  position: relative;
+}
+.innerTitle.star_inside::before {
+  position: absolute;
+  content: url("../images/star.svg");
+  width: 60px;
+  height: 60px;
+  top: -140px;
+  left: 250px;
 }
 .innerTitle.border {
   -moz-box-sizing: border-box;
@@ -255,6 +290,11 @@ p {
   position: absolute;
   bottom: 0;
   left: 30px;
+}
+.btn_services {
+  position: absolute;
+  bottom: 40px;
+  left: 35px;
 }
 
 .label {
@@ -1674,6 +1714,173 @@ footer {
   border-bottom: 1px solid #9999993d;
 }
 
+.s_services {
+  margin: 60px 0;
+}
+
+.services-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 640px));
+  grid-gap: 20px;
+  justify-content: center;
+}
+.services__item {
+  position: relative;
+  color: #ffffff;
+}
+.services__item img {
+  width: 100%;
+  height: 100%;
+}
+.services__item__title {
+  margin: 0;
+  position: absolute;
+  top: 40px;
+  left: 35px;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 1;
+}
+.services__item__title:after {
+  content: " ";
+  width: 25px;
+  height: 2px;
+  background: #FECA8B;
+  display: block;
+  margin-top: 35px;
+}
+.services__item__list {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 150px;
+  left: 35px;
+  list-style: none;
+  font-size: 24px;
+}
+.services__item__list li {
+  position: relative;
+  padding-left: 25px;
+}
+.services__item__list li:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 11px;
+  height: 2px;
+  background: #B38C5E;
+  display: block;
+}
+
+.clinic {
+  background: url(../images/clinic_bg.png) no-repeat right top;
+  background-size: inherit;
+  font-family: PT, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+}
+.clinic__intro {
+  margin-top: 70px;
+}
+.clinic__intro__title {
+  max-width: 810px;
+  font-size: 40px;
+  font-family: Nat Flight, sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.clinic__intro__photo {
+  float: right;
+}
+.clinic__intro p {
+  padding-bottom: 30px;
+}
+.clinic__intro__thesis {
+  max-width: 1200px;
+  font-size: 22px;
+  line-height: 34px;
+}
+.clinic__intro__mdesays {
+  margin-top: 45px;
+  padding: 55px 105px 55px 69px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  color: #ffffff;
+  background: #70604C;
+}
+.clinic__intro__mdesays__who {
+  position: relative;
+  font-size: 22px;
+  line-height: 34px;
+}
+.clinic__intro__mdesays__who:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 13px;
+  width: 45px;
+  height: 45px;
+  background: url(../images/coma.svg) no-repeat right center, url(../images/coma.svg) no-repeat left center;
+}
+.clinic__intro__mdesays p {
+  margin-bottom: 0;
+  max-width: 320px;
+  font-size: 36px;
+  font-family: "Nat Flight", sans-serif;
+  line-height: 42px;
+  color: #ffffff;
+}
+.clinic__advantages {
+  margin-top: 230px;
+  max-width: 1230px;
+  font-family: Nat Flight, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 42px;
+}
+.clinic__advantages__list {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  list-style: none;
+}
+.clinic__advantages__item {
+  margin-top: 70px;
+  position: relative;
+  width: calc(100% / 3 - 60px);
+}
+.clinic__advantages__item:not(:last-child) {
+  margin-right: 90px;
+}
+.clinic__advantages__item:before {
+  content: "";
+  position: absolute;
+  top: -170px;
+  left: 0;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+}
+.clinic__advantages__item.item1::before {
+  background: #FECA8B url(../images/clock1.png) no-repeat center center;
+}
+.clinic__advantages__item.item2::before {
+  background: #FECA8B url(../images/team1.png) no-repeat center center;
+}
+.clinic__advantages__item.item3::before {
+  background: #FECA8B url(../images/health-check.png) no-repeat center center;
+}
+
+.superiors__title {
+  display: inline;
+  font-family: Nat Flight, sans-serif;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 65px;
+}
+
 /* RESPONSIVE */
 @media only screen and (max-width: 1200px) {
   .header {
@@ -1871,6 +2078,22 @@ footer {
 
   .staff__list__item_page {
     margin: 0 auto;
+  }
+
+  .services__item img {
+    width: 100%;
+    height: 100%;
+  }
+  .services__item__title {
+    font-size: 30px;
+    top: 30px;
+  }
+  .services__item__title:after {
+    margin-top: 8px;
+  }
+  .services__item__list {
+    top: 80px;
+    font-size: 18px;
   }
 }
 
