@@ -14,6 +14,7 @@
       line-height: 1.3
     &__photo
       float: right
+      max-width: 60%
     & p
       padding-bottom: 30px
     &__thesis
@@ -29,9 +30,10 @@
       color: #ffffff
       background: #70604C
       &__who
+        padding-right: 60px
         position: relative
         font-size: 22px
-        line-height: 34px
+        line-height: 1.5
         &:after
           content: ''
           position: absolute
@@ -45,7 +47,7 @@
         max-width: 320px
         font-size: 36px
         font-family: 'Nat Flight', sans-serif
-        line-height: 42px
+        line-height: 1.15
         color: #ffffff
 
   &__advantages
@@ -54,7 +56,7 @@
     font-family: Nat Flight, sans-serif
     font-size: 30px
     font-weight: 400
-    line-height: 42px
+    line-height: 1.4
     &__list
       padding: 0
       width: 100%
@@ -81,15 +83,81 @@
       &.item3::before
         background: #FECA8B url(../images/health-check.png) no-repeat center center
 
+.s_superiors
+  margin-bottom: 70px
+
 .superiors
   &__title
     display: inline
     font-family: Nat Flight, sans-serif
     font-size: 55px
     font-weight: 400
-    line-height: 65px
+    line-height: 1.3
+  &__list
+    margin-top: 60px
+    +space
+  &__card
+    margin-bottom: 20px
+    padding: 45px 40px 35px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: calc(50% - 10px)
+    background: #F1F0EE
+    +border-radius(25px)
+    +box-sizing(border-box)
+    &:nth-child(even)
+      margin-left: 20px
+      background: #F6F2EC
+    & img
+      margin-right: 40px
+      width: 211px
+      height: 211px
+      +round
+    &__info
+      &__main
+        margin-bottom: 40px
+        display: flex
+      &__bubble
+        padding: 12px 22px 15px 30px
+        +border-radius(10px)
+        background-color: #ffffff
+        font-family: "PT", sans-serif
+        font-size: 15px
+        line-height: 1.6
+        & a
+          color: #70604C
+          text-decoration: none
+          &:hover
+            text-decoration: underline
+      &__contacts
+        margin-top: 20px
+        font-family: "PT", sans-serif
+        font-size: 18px
+      &__phone
+        font-size: 30px
+        font-weight: 700
+        color: #000000
+        text-decoration: none
+        white-space: nowrap
+        &:hover
+          text-decoration: underline
 
-
-
+    &__surname
+      margin-top: 13px
+      display: block
+      font-size: 55px
+      color: #B28C5E
+      line-height: 1
+    &__name
+      display: block
+      font-size: 26px
+      line-height: 1.3
+    &__post
+      margin-top: 10px
+      display: block
+      font-family: "PT", sans-serif
+      font-size: 18px
+      line-height: 1.4
 
 

@@ -60,3 +60,37 @@
         &:not(:last-child):after
           content: unset
 
+  .innerTitle
+    &.star_gorizontal
+      &::before
+        top: -55px
+        right: 15px
+    &.star_high
+      &::before
+        left: 120px
+        top: -50px
+
+  .clinic
+    &__intro
+      &__mdesays
+        padding: 35px 75px 35px 45px
+        & p
+          max-width: unset
+          font-size: 30px
+        &__who
+          font-size: 20px
+
+    &__advantages
+      &__item
+        font-size: 28px
+        &:not(:last-child)
+          margin-right: 70px
+
+  .superiors
+    &__card
+      padding: 40px 35px 30px
+      & img
+        margin-right: 25px
+        width: 180px
+        height: 180px
+
