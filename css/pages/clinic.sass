@@ -160,4 +160,32 @@
       font-size: 18px
       line-height: 1.4
 
+.partners
+  margin-bottom: 50px
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr))
+  &__item
+    padding: 25px 42px
+    display: flex
+    flex-direction: column
+    border: 1px solid #F1F1F1
+    +box-sizing(border-box)
+    @include transition(border)
+    text-align: center
+    font-size: 18px
+    line-height: 1.3
+    &:hover
+      border: 1px solid #C4C4C4
+    & img
+      margin-bottom: 15px
+      align-self: center
+    & a
+      color: #000000
+      text-decoration: none
+      &:hover
+        text-decoration: underline #C4C4C4
+
+
+
+
 

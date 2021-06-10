@@ -466,6 +466,7 @@
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
       grid-gap: 20px
       list-style: none
+
       & .btn_beige
         width: 100%
         padding-top: 25px
@@ -604,6 +605,7 @@
       &.socials
         background: $subtitle
         padding: 40px
+        align-self: flex-start
         +box
         +border-radius(25px)
 
@@ -635,3 +637,17 @@
 
           &.face
             background: url("../images/face.svg") no-repeat 5px
+      &.news-page
+        width: 100%
+
+  &_page
+    margin: 55px 0
+    display: flex
+    &__list
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+      gap: 40px
+      &__item
+        display: flex
+        flex-direction: column
+
