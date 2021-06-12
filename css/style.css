@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* LIBS */
 /* Slider */
 .slick-slider {
@@ -803,6 +804,7 @@ footer {
 .aside {
   padding: 15px 40px 40px 40px;
   margin-left: 40px;
+  max-width: 400px;
   background: #F6F2EC;
   align-self: flex-start;
   -moz-box-sizing: border-box;
@@ -815,9 +817,6 @@ footer {
 .aside a {
   color: #000000;
   text-decoration: none;
-}
-.aside nav {
-  width: 330px;
 }
 .aside__title {
   font-size: 26px;
@@ -859,8 +858,7 @@ footer {
 .aside__list.social li:not(:last-child) {
   margin-bottom: 15px;
 }
-
-.btn_bordered {
+.aside .btn_bordered {
   border-width: 2px;
   width: 100%;
   font-size: 18px;
@@ -870,16 +868,59 @@ footer {
   line-height: 55px;
   padding: 0 20px 0 70px;
 }
-.btn_bordered.insta {
+.aside .btn_bordered.insta {
   background: url("../images/insta.svg") no-repeat 5px;
 }
-.btn_bordered.vk {
+.aside .btn_bordered.vk {
   background: url("../images/vk.svg") no-repeat 5px;
 }
-.btn_bordered.face {
+.aside .btn_bordered.face {
   background: url("../images/face.svg") no-repeat 5px;
 }
 
+.pagination_news {
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
+}
+.pagination_news a {
+  text-decoration: none;
+  color: #000000;
+}
+.pagination_news__list {
+  margin: 0 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-family: PT, sans-serif;
+}
+.pagination_news__item {
+  padding: 0 20px;
+  font-size: 24px;
+  line-height: 1;
+}
+.pagination_news__item a {
+  padding: 5px 10px;
+}
+.pagination_news__item a:hover {
+  font-weight: 700;
+}
+.pagination_news__item.active a {
+  color: #5D503F;
+  font-weight: 700;
+}
+.pagination_news__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #5D503F;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
 /* PAGES */
 .s_hero {
   margin-top: -180px;
@@ -1675,13 +1716,16 @@ footer {
   margin-bottom: 15px;
 }
 .news__list__item__link {
+  margin-top: 13px;
   font-size: 15px;
   font-family: Nat Flight, sans-serif;
   font-weight: 400;
   color: #B28C5E;
   line-height: 1;
   text-decoration: none;
-  margin-left: 10px;
+}
+.news__list__item__link::before {
+  content: "—";
 }
 .news__list__item__link:hover {
   text-decoration: underline;
@@ -1747,6 +1791,13 @@ footer {
 .news_page__list__item {
   display: flex;
   flex-direction: column;
+}
+.news_page__list__item p {
+  font-size: 16px;
+  font-family: PT, sans-serif;
+  font-weight: 400;
+  color: #999999;
+  line-height: 1.5;
 }
 
 .s_doctors {

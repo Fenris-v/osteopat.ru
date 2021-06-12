@@ -1,0 +1,35 @@
+.pagination
+  &_news
+    margin-bottom: 90px
+    display: flex
+    justify-content: center
+    a
+      text-decoration: none
+      color: $textBlack
+    &__list
+      margin: 0 20px
+      padding: 0
+      display: flex
+      align-items: center
+      list-style: none
+      font-family: $pt
+    &__item
+      padding: 0 20px
+      font-size: 24px
+      line-height: 1
+      a
+        padding: 5px 10px
+        &:hover
+          font-weight: 700
+      &.active a
+        color: #5D503F
+        font-weight: 700
+    &__button
+      +center
+      width: 50px
+      height: 50px
+      background-color: $buttonBrown
+      +round
+      &.prev
+      &.next
+

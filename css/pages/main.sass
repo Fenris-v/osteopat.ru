@@ -595,9 +595,12 @@
         margin-bottom: 15px
 
       &__link
+        margin-top: 13px
         @include font($beige, $regular, 400, 15px, 1)
         text-decoration: none
-        margin-left: 10px
+
+        &::before
+          content: '—'
 
         &:hover
           text-decoration: underline
@@ -650,4 +653,7 @@
       &__item
         display: flex
         flex-direction: column
+        & p
+          @include font($gray, $pt, 400, 16px)
+
 
