@@ -144,6 +144,9 @@ p
     bottom: 40px
     left: 35px
 
+  &_back
+    margin: 20px 0
+    color: #333333
 
 .label
   @include font($white, $pt, 400, 18px, 2)
@@ -198,14 +201,26 @@ p
   background: none
   position: absolute
   cursor: pointer
-  top: -190px
-
   &:focus
     outline: none
 
-  &.slick-next
-    right: 0
-    +transform(rotate(180deg))
+.staff__list
+  .slick-arrow
+    top: -190px
 
-  &.slick-prev
-    right: 90px
+    &.slick-next
+      right: 0
+      +transform(rotate(180deg))
+
+    &.slick-prev
+      right: 90px
+
+.license__list
+  margin-top: 40px
+  .slick-arrow
+    top: 50%
+    @include transform(translateY(-50%))
+  .slick-next
+    right: -25px
+  .slick-prev
+    left: -25px

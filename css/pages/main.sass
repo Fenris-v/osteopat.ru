@@ -462,10 +462,13 @@
     &_page
       padding: 0
       margin-top: 50px
-      display: grid
+      display: none
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
       grid-gap: 20px
       list-style: none
+      &.active
+        display: grid
+
 
       & .btn_beige
         width: 100%
@@ -486,8 +489,6 @@
   .innerTitle.star
     &::before
       top: -20px
-
-
   &__list
     +space
 

@@ -3,8 +3,8 @@
 
 .spec
   &__list
+    margin: 12px 0 14px
     padding: 0
-    margin-bottom: 12px
     display: flex
     list-style: none
     & li
@@ -31,6 +31,16 @@
         bottom: -13px
         z-index: 5
         @include transition(all 0.3s)
+      &:not(:last-child):after
+        content: ""
+        position: absolute
+        height: 5px
+        width: 5px
+        background-color: #999999
+        top: 45%
+        right: -50px
+        @include transform(rotate(45deg))
+
       &:hover
         color: #B28C5E
         &:before

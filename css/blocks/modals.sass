@@ -1,0 +1,94 @@
+.modal--callback
+  max-width: 995px
+  width: 100%
+  padding: 45px
+  text-align: center
+  +box
+  +border-radius(10px)
+  &.modal__title
+    &::after
+      margin-top: 28px
+
+.modal
+  display: none
+  background: #F5F5F5
+  &__title
+    margin-bottom: 50px
+    text-align: left
+    @include font($textBlack, $regular, 400, 55px, 1)
+
+  &__input-wrapper
+    display: flex
+    &_left
+      max-width: 295px
+
+  &__btns
+    display: flex
+    flex-direction: column
+
+    a
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  p
+    margin-bottom: 40px
+
+  &__order
+    margin-bottom: 30px
+    text-align: left
+
+    &__item
+      display: flex
+      background: $white
+      padding: 15px
+
+      img
+        width: 100px
+        height: 100px
+        +cover
+        flex-shrink: 0
+        margin-right: 10px
+
+      &_top
+        @include font($textBlack, $regular, 14px)
+        margin-bottom: 10px
+
+      &__name
+        @include font($textBlack, $regular, 16px)
+        margin-bottom: 10px
+
+      &__price
+        @include font($beige, $regular, 15px)
+        margin-bottom: 10px
+
+  &-form__row
+    display: flex
+
+.form
+  &-input
+    width: 100%
+    @include font($textBlack, $pt, 400, 18px, 1)
+    margin-bottom: 10px
+    padding: 15px 10px 15px 25px
+    border: 1px solid $mint
+    +border-radius(10px)
+    &:focus
+      outline: none
+  &-textarea
+    margin-left: 10px
+
+  &:focus
+    outline: none
+//
+//.modal-form__row
+//  label
+//    margin-bottom: 30px
+//    display: block
+
+.notice_checked
+  &__label
+    margin: 15px 0 30px
+    display: flex
+    align-items: center
+    @include font($gray, $pt, 400, 12px, 1)
+
