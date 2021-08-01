@@ -72,12 +72,59 @@ $(document).ready(() => {
         ]
     });
 
+
+    $('.license__slider').slick({
+        infinite: true,
+        arrows: true,
+        dots: true,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        nextArrow: '<button type="button" class="slick-next"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="25" transform="matrix(-1 0 0 1 25 25)" fill="#5D503F"/><path d="M21.624 18.9025L22.9515 17.5751L30.3765 25.0001L22.9515 32.425L21.624 31.0975L27.7215 25.0001L21.624 18.9025H21.624Z" fill="white"/></svg></button>',
+        prevArrow: '<button type="button" class="slick-prev"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="25" fill="#5D503F"/><path d="M28.376 18.9025L27.0485 17.5751L19.6235 25.0001L27.0485 32.425L28.376 31.0975L22.2785 25.0001L28.376 18.9025H28.376Z" fill="white"/></svg></button>',
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
+
     $('.hero__slider').slick({
         infinite: true,
         arrows: false,
         dots: true,
         slidesToShow: 1,
         autoplay: true,
+    });
+
+    $('.feedbacks__slider').slick({
+        infinite: true,
+        arrows: true,
+        dots: false,
+        slidesToShow: 1,
+        autoplay: true,
+        nextArrow: '<button type="button" class="slick-next"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="25" transform="matrix(-1 0 0 1 25 25)" fill="#5D503F"/><path d="M21.624 18.9025L22.9515 17.5751L30.3765 25.0001L22.9515 32.425L21.624 31.0975L27.7215 25.0001L21.624 18.9025H21.624Z" fill="white"/></svg></button>',
+        prevArrow: '<button type="button" class="slick-prev"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="25" fill="#5D503F"/><path d="M28.376 18.9025L27.0485 17.5751L19.6235 25.0001L27.0485 32.425L28.376 31.0975L22.2785 25.0001L28.376 18.9025H28.376Z" fill="white"/></svg></button>',
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                }
+            }
+        ]
     });
 
     /**
@@ -114,13 +161,31 @@ $(document).ready(() => {
             return;
         }
 
-        console.log(tabList)
-        console.log(tabContent)
         tabList.removeClass('active');
         tabContent.removeClass('active');
 
         currentTab.addClass('active');
         tabContent.eq(currentTab.index()).addClass('active');
+    });
+
+    let tabs = $('.tabs__label__title');
+    let tabsContent = $('.tabs__items__item');
+    tabs.on('click', (e) => {
+        e.preventDefault();
+
+        let currentTab = $(e.target).hasClass('tabs__label__title')
+            ? $(e.target)
+            : $(e.target).parents('.tabs__label__title');
+
+        if (currentTab.hasClass('active')) {
+            return;
+        }
+
+        tabs.removeClass('active');
+        tabsContent.removeClass('active');
+
+        currentTab.addClass('active');
+        tabsContent.eq(currentTab.index()).addClass('active');
     });
 
     /**

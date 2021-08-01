@@ -54,7 +54,7 @@
           background: rgba(235, 234, 234, 0.5)
           display: flex
           align-items: center
-          padding: 30px
+          padding: 25px
           +border-radius(15px)
 
           p
@@ -64,7 +64,7 @@
           img
             width: 70px
             flex-shrink: 0
-            margin-right: 40px
+            margin-right: 25px
 
         &_big
           grid-column-start: 1
@@ -78,10 +78,11 @@
 
 .feedbacks
   &__slide
-    background: rgba(235, 234, 234, 0.5)
-    +border-radius(15px)
-    +space-nw
-    overflow: hidden
+    > div
+      background: rgba(235, 234, 234, 0.5)
+      +border-radius(15px)
+      +space-nw
+      overflow: hidden
 
     &__content
       padding: 40px 60px
@@ -111,8 +112,46 @@
       min-height: 430px
       +cover
 
+  .slick-arrow
+    top: 50%
+    z-index: 1
+    padding: 0
+
+    &.slick-next
+      right: 0
+      +transform(translateX(50%))
+
+    &.slick-prev
+      left: 0
+      +transform(translateX(-50%))
+
 .s_license
   margin-bottom: 50px
+
+  .license
+    margin-top: 0
+
+.license
+  img
+    margin: 0 10px
+
+  &__slider
+    position: relative
+
+  .slick-list
+    margin: 0 -10px
+
+  .slick-arrow
+    top: 36%
+    z-index: 1
+
+    &.slick-next
+      right: 0
+      +transform(translateX(50%))
+
+    &.slick-prev
+      left: 0
+      +transform(translateX(-50%))
 
 .s_price
   margin-bottom: 50px

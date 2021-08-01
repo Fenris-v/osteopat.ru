@@ -87,3 +87,49 @@
 
   .news_page__list
     gap: 20px
+
+  .doctor
+    flex-direction: column
+
+    &__photo
+      width: 100%
+      margin-right: 0
+      margin-bottom: 30px
+
+      img
+        margin: 0 auto 15px
+        display: block
+        max-width: 100%
+
+    &__bio
+      &::after
+        display: none
+
+  .s_feedbacks, .s_license, .s_staff
+    .slick-dots
+      margin-top: 30px
+
+  .item
+    grid-template-columns: 1fr
+
+    img
+      width: 100%
+
+  .tabs__label
+    flex-direction: column
+
+    &__title
+      padding-bottom: 15px
+      width: 100%
+      +box
+      +border-radius(0)
+
+      &:not(:last-child)
+        margin-right: 0
+
+  .tabs__items
+    margin-top: 0
+
+    &__item
+      +border-radius(0 0 15px 15px)
+      grid-template-columns: 1fr

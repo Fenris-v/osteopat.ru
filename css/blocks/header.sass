@@ -75,17 +75,24 @@
 .breadcrumbs
   padding-top: 25px
   font-family: PT, sans-serif
+
   &__list
     margin: 0
     padding: 0
     display: flex
     list-style: none
-    & a
+    flex-wrap: wrap
+
+    li
+      white-space: nowrap
+
+    a
       margin-right: 63px
       position: relative
       text-decoration: none
       color: $textBrown
-      &:after
+
+      &::after
         content: ""
         position: absolute
         height: 5px
@@ -94,5 +101,6 @@
         top: 45%
         right: -33px
         transform: rotate(45deg)
-    & span
+
+    span
       color: $textLightBlack
